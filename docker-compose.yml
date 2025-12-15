@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/docker/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      APP_NAME: ${APP_NAME:-TradePilot}
+      APP_VERSION: ${APP_VERSION:-0.1.0}
+      ENV: ${ENV:-development}
+      DEBUG: ${DEBUG:-false}
+    restart: unless-stopped
