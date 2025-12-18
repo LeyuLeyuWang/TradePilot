@@ -1,2 +1,4 @@
-#!/bin/bash
-echo "TODO: Add linting commands."
+#!/usr/bin/env bash
+set -e
+
+ruff check .

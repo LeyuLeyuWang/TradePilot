@@ -1,2 +1,5 @@
-#!/bin/bash
-echo "TODO: Add test suite."
+#!/usr/bin/env bash
+set -e
+
+scripts/lint.sh
+pytest
